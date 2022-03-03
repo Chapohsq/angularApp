@@ -1,6 +1,10 @@
 <div *ngIf="task" class="container">
+  <div class="data-container">
   <span class="task-name">{{task.name}}</span>
   <span>{{task.creationDate}}</span>
   <span>{{task.priority}}</span>
+  <span>{{task.id}}</span>
+</div>
+  <button (click)="taskDone()" class="icon-btn"><img class="icon" src="./assets/images/check-solid.svg" alt=""></button>
 </div>
 

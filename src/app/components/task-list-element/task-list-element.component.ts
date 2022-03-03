@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Task } from 'src/app/model/task';
+
 
 @Component({
   selector: 'app-task-list-element',
@@ -10,10 +11,16 @@ export class TaskListElementComponent implements OnInit {
 
 
 @Input()task?: Task;
-
+@Output()doneEvent: EventEmitter<string>
   constructor() {
+    this.doneEvent =new EventEmitter()
     this.task = new Task('Studia Angular', 10);
   }
 
   ngOnInit(): void {}
+  taskDone(){
+    if (this.task) {
+this.doneEvent.emit(this.task.id);
+    }
+  }
 }

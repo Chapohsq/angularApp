@@ -3,8 +3,10 @@
 .container{
   background-color: white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 8px;
+  box-shadow: 0 3px 5px rgba(0 , 0, 0, 16), 0 3px 6px rgba(0 , 0, 0, 23);
+  justify-content: space-between;
 }
 .task-name{
 padding: 2px;
@@ -12,3 +14,22 @@ font-size: large;
 font-weight: bold;
 }
 
+.data-container{
+  display: flex;
+  flex-direction: column;
+
+}
+.icon{
+width: 20px;
+}
+
+.icon-btn{
+  border-style: none;
+  background-color: white;
+border-radius: 5px;
+}
+
+.icon-btn:hover{
+background-color: rgba(0, 128, 0, 0.356);
+
+}
